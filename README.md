@@ -64,6 +64,20 @@ O dashboard inclui:
 
 ---
 
+### 🛠️ Nota Técnica: Personalização da Modelagem
+**O Desafio:**
+A base original tratava o atributo `Total Value` como um dado estático (número fixo). Isso limitava a interatividade, pois o gráfico não recalculava a receita líquida corretamente ao tentar isolar produtos específicos.
+
+**A Solução:**
+Refatorei a coluna de valor total, substituindo os valores estáticos por uma fórmula estruturada dinâmica.
+
+**Fórmula Implementada:**
+```excel
+=SOMA([@[Subscription Price]];[@[EA Play Season Pass Price]];[@[Minecraft Season Pass Price]])-[@[Coupon Value]]
+```
+
+---
+
 ## 🚀 Como Utilizar
 
 1. **Download:** Baixe o arquivo `.xlsx` deste repositório.
